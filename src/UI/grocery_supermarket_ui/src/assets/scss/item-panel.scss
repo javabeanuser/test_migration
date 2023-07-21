@@ -1,0 +1,27 @@
+@import 'colors.scss';
+
+.item-panel{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+
+}
+
+.item-panel::before {
+    content: "";
+    background-image: url('./../images/menu/3423.jpg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+    background-size: contain;
+    opacity: 0.1;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+}

@@ -1,0 +1,43 @@
+@import 'colors.scss';
+
+$border-radius: 5px;
+
+.item-preview{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px;
+    width: 200px;
+    height: 200px;
+    border-color: $componentBlack;
+    border-style: solid;
+    background-color: $componentWhite;
+    border-radius: $border-radius;
+}
+
+.item-preview img{
+    // width: 100%;
+    height: 125px;    
+    object-fit: fill;   
+    opacity: 0.9; 
+}
+
+.add-item-button{
+    height: 25px;
+    color: $componentWhite;
+    background-color: $conponentOrange;
+    border: 0;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.item-price {
+    font-size: 30px;
+    text-align: right;
+    color: $conponentGreen;
+}
+
+.item-name{
+    text-align: center; 
+    font-size: 20px;
+}

@@ -1,0 +1,15 @@
+@import 'colors.scss';
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;    
+}
+
+.horizontal-line {
+    height: 2px;
+    background-color: $conponentOrange;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
