@@ -9,7 +9,7 @@ $border-radius: 5px;
     border: 1px;
     width: 200px;
     height: 200px;
-    border-color: $componentBlack;
+    border-color: $componentGray;
     border-style: solid;
     background-color: $componentWhite;
     border-radius: $border-radius;
@@ -34,10 +34,12 @@ $border-radius: 5px;
 .item-price {
     font-size: 30px;
     text-align: right;
+    padding-right: 10px;
     color: $conponentGreen;
 }
 
 .item-name{
+    margin-top: 3px ;
     text-align: center; 
     font-size: 20px;
 }
