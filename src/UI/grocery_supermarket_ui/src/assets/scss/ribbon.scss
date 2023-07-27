@@ -1,0 +1,27 @@
+@import 'colors.scss';
+
+.ribbon{
+    height: 373px;
+    background:url("./../images/ribbon/2.jpg");
+    background-size:cover;
+    background-position: center;
+    // animation: chbg 30s infinite backwards;
+}
+
+@keyframes chbg {
+    0% {
+        background:url("./../images/ribbon/3.jpg");
+        background-size:cover;
+        background-position: center;
+    }
+    50% {
+        background:url("./../images/ribbon/2.jpg");
+        background-size:cover;
+        background-position: center;
+    }
+    100% {
+        background:url("./../images/ribbon/1.jpg");
+        background-size:cover;
+        background-position: center;
+    }
+  }

@@ -1,0 +1,51 @@
+@import 'colors.scss';
+
+.menu {
+    height: 37px;
+    width: 100%;
+    background: $conponentGreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border: 0;
+    border-bottom: 2px;
+    border-top: 2px;
+    border-color: $conponentOrange;
+    border-style: solid;
+}
+
+.menu-button { 
+    height: 28px;
+    padding-top: 0.5%;
+    width: 20%;
+    background: $conponentGreen;
+    text-align: center;
+    color: $componentWhite;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0;
+    border-bottom: 2px;
+    border-top: 2px;
+    border-color: $conponentOrange;
+    border-style: solid;
+}
+
+.menu-button:hover{
+    background-color: white;
+    color: $conponentOrange;
+    border-bottom-color: $componentWhite;
+}
+
+.menu-button[id='menu-selected']{
+    background-color: white;
+    color: $conponentOrange;
+    border-bottom-color: $componentWhite;
+}
+
+.menu-line{
+    width: 2px;
+    height: 20px;
+    background-color: $conponentOrange;
+}
