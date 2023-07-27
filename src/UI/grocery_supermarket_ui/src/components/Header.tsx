@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import {AppState} from './../types/Types'
 import './../assets/scss/header.scss';
 
 import {
-  useSelector, 
-  useDispatch
+  useSelector
 } from 'react-redux'
 
 export const Header = () => {

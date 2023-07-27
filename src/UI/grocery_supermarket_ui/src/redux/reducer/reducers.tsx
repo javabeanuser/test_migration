@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+// import { combineReducers } from 'redux'
 import { ADD_TO_CART } from '../action/actions'
 import { AppState } from '../../types/Types'
 
