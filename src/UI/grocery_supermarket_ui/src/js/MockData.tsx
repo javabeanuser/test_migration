@@ -1,5 +1,7 @@
-import {Item, Menu} from "../types/PropTypes"
+import {Item, Menu} from "../types/Types"
+
 const item:Item  ={
+    id: 1,
     name: 'Strawberry',
     preview: "https://st.depositphotos.com/1034300/1353/i/600/depositphotos_13532977-stock-photo-strawberry-fruit-food.jpg",
     price: 20,

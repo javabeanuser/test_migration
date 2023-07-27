@@ -31,6 +31,24 @@ $border-radius: 5px;
     border-bottom-right-radius: $border-radius;
 }
 
+.add-item-button:after {
+    content: "";
+    background: $conponentGreen;
+    padding-top: 30%;
+    padding-left: 20%;
+    margin-left: -40px;
+    margin-top: -10%;
+    opacity: 0;
+    transition: all 0.5s
+  }
+  
+  .add-item-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 5;
+    transition: 0s
+  }
+
 .item-price {
     font-size: 30px;
     text-align: right;
