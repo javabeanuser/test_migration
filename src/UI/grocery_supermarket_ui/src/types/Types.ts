@@ -1,9 +1,10 @@
 
 export type Item = {
-    id: Number,
+    id: number,
+    count: number,
     name: string,
     preview: string,
-    price: Number,
+    price: number,
     description: string
 }
 
