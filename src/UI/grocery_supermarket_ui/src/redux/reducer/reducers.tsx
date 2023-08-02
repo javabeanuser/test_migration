@@ -6,7 +6,8 @@ const initMarketState: AppState = {
    payload: {
       cart: {
          count: 0,
-         items: []
+         items: [],
+         sum: 0
       }
    }
 }
@@ -37,7 +38,8 @@ export function marketApp(state: AppState = initMarketState, action: any) {
             payload: {
                cart: {
                   count: arr.reduce((accumulator, item) => accumulator + item.count,0),
-                  items: arr
+                  items: arr,
+                  sum:   arr.reduce((sum,cur)=>sum+(cur.count*cur.price),0)
                }
             }
          }
@@ -50,7 +52,8 @@ export function marketApp(state: AppState = initMarketState, action: any) {
             payload: {
                cart: {
                   count: arr.reduce((accumulator, item) => accumulator + item.count,0),
-                  items: arr
+                  items: arr,
+                  sum:   arr.reduce((sum,cur)=>sum+(cur.count*cur.price),0)
                }
             }
          }
@@ -69,7 +72,8 @@ export function marketApp(state: AppState = initMarketState, action: any) {
             payload: {
                cart: {
                   count: arr.reduce((accumulator, item) => accumulator + item.count,0),
-                  items: arr
+                  items: arr,
+                  sum:   arr.reduce((sum,cur)=>sum+(cur.count*cur.price),0)
                }
             }
          }

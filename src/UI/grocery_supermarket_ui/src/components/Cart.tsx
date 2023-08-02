@@ -7,7 +7,7 @@ import './../assets/scss/cart.scss'
 import { addToCart, removeFromCart, removeItemFromCart } from "../redux/action/actions";
 
 export const Cart  = () =>{
-    const {count, items} = useSelector<AppState, any>(state => state.payload.cart)
+    const {count, items, sum} = useSelector<AppState, any>(state => state.payload.cart)
     const dispatch = useDispatch() 
 
     useEffect(()=>{}, [count])
@@ -56,11 +56,12 @@ export const Cart  = () =>{
                                 <button className='cart-item-remove-button' onClick={()=> {dispatch(removeFromCart(item))}}>Remove</button>
                             </div>
                         </div>)
-                        })                        
+                        }) 
+                              
+                                           
                     : <div className="x-center-y">Your Cart is Empty :(</div>
-                    }
-                    
-                </div>
+                    }                  
+                </div>                
                 <div className='cart-order'>
                     <div>
                         <div>
@@ -83,7 +84,7 @@ export const Cart  = () =>{
                         </div>
                         <div className="flex-in-line">                            
                             <div className="bold">Total</div>
-                            <div className="bold">0</div></div>
+                            <div className="bold">${sum}</div></div>
                         </div>
                     <div className="checkout-button">Checkout</div>
                 </div>

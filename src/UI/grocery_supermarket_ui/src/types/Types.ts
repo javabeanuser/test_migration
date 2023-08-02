@@ -18,7 +18,8 @@ export type AppState = {
     payload: {
         cart: {
             count: Number,
-            items: Array<Item>        
+            items: Array<Item>,
+            sum?: number        
         }        
     }
 }
