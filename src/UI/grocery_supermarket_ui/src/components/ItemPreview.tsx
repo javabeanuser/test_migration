@@ -4,7 +4,6 @@ import {ItemProps} from './../types/PropTypes'
 import {addToCart} from './../redux/action/actions'
 
 import {
-    useSelector, 
     useDispatch
 } from 'react-redux'
 

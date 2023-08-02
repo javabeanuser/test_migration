@@ -1,9 +1,10 @@
 
 export type Item = {
-    id: Number,
+    id: number,
+    count: number,
     name: string,
     preview: string,
-    price: Number,
+    price: number,
     description: string
 }
 
@@ -17,7 +18,8 @@ export type AppState = {
     payload: {
         cart: {
             count: Number,
-            items: Array<Item>        
+            items: Array<Item>,
+            sum?: number        
         }        
     }
 }

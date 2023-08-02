@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {Market} from './Market';
+import {Market} from './components/Market';
 import reportWebVitals from './reportWebVitals';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import {configureStore} from './redux/store/store'
 import  {Provider} from "react-redux"
+import { Cart } from './components/Cart';
 
 const store = configureStore()
 
@@ -15,7 +18,12 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <Market />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Market />}/>
+            <Route path="/cart" element={<Cart/>} />
+          </Routes>
+        </BrowserRouter> 
       </Provider>
     </React.StrictMode>
 );

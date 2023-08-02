@@ -44,3 +44,14 @@
   width: 37px;
   height: 37px;
 }
+
+.header-shopping-cart:hover{
+  cursor: pointer;
+}
+
+.header-logo{
+  background-color: $conponentOrange;
+  padding: 10px;
+  margin-right: 55%;
+  margin-left: 10px;
+}

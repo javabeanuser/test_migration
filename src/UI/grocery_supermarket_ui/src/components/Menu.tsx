@@ -8,7 +8,7 @@ export const Menu = ({menus}:MenuProps) =>{
     <>
         <div className="menu"> 
             {   //@ts-ignore
-                menus.map((menu, idx) => <div className="menu-button" key={menu.name} id={menu.name == 'Grocery' ? "menu-selected" : "menu-button"} key={menu.name} onClick={menu.handler}>{menu.name}</div>)
+                menus.map((menu, idx) => <div className="menu-button" key={menu.name} id={menu.name === 'Grocery' ? "menu-selected" : "menu-button"} key={menu.name} onClick={menu.handler}>{menu.name}</div>)
 
             }            
         </div>
