@@ -1,6 +1,8 @@
 import configparser
 config = configparser.ConfigParser()
-config.read('app.properties')
+conf = config.read('app.properties')
+if conf.__len__() == 0:
+    config.read('./../app.properties')
 
 class Config:
 
