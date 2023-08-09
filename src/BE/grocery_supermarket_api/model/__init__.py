@@ -31,15 +31,42 @@ try:
     session.add_all([admin, moderator, user])
     session.commit()
     Logger.info("Added roles in g_role")
-except:
+except Exception as e:
     session.rollback()
-    Logger.info("Roles exist in the table g_role")
+    Logger.warn(f"Roles exist in the table g_role: {e}")
 
 try:
     dollar = PriceCode("dollar", "$")
     session.add_all([dollar])
     session.commit()
     Logger.info("Added price codes in g_price_code")
-except:
+except Exception as e:
     session.rollback()
-    Logger.info("Price Codes exist in the table g_price_code")
+    Logger.warn(f"Price Codes exist in the table g_price_code: {e}")
+
+
+try:
+    session.add_all([Group("Grocery"),
+                     Group("Home"),
+                     Group("Car"),
+                     Group("Meat")
+                     ])
+    session.commit()
+    Logger.info("Added groups in g_group")
+except Exception as e:
+    session.rollback()
+    Logger.warn(f"Groups exist in the table g_group: {e}")
+
+
+try:
+    session.add_all([Item(group_id=1, name="Apple", description="An Apple", price_code_id=1, price=10),
+                     Item(group_id=1, name="Kiwi", description="A Kiwi", price_code_id=1, price=12),
+                     Item(group_id=1, name="Carrot", description="A Carrot", price_code_id=1, price=5),
+                     Item(group_id=1, name="Watermelon", description="A Watermelon", price_code_id=1, price=2)
+                     ])
+    session.commit()
+    Logger.info("Added base items in g_item")
+except Exception as e:
+    session.rollback()
+    Logger.warn(f"Items exist in the table g_item: {e}")
+
