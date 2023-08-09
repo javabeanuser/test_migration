@@ -7,5 +7,6 @@ class Group(Base):
     id: Mapped[int] = mapped_column(primary_key=True, nullable=False, autoincrement=True)
     name: Mapped[str] = mapped_column(nullable=False, unique=True)
 
-    def __init__(self, name):
+    def __init__(self, name= None, id = None):
         self.name = name
+        self.id = id

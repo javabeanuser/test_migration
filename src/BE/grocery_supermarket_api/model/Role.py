@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Mapped, mapped_column,relationship
 from common import Base
-from model.user_role import UserRole
+from model.UserRole import UserRole
 
 class Role(Base):
     __tablename__ = 'g_role'

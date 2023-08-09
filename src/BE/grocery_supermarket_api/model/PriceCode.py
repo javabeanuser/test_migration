@@ -7,8 +7,8 @@ class PriceCode(Base):
     id: Mapped[int]= mapped_column(primary_key=True, nullable=False, autoincrement=True)
     name: Mapped[str] = mapped_column(nullable=False, unique=True)
     sign: Mapped[str] = mapped_column(nullable=False, unique=True)
-    item: Mapped["Item"] = relationship(back_populates="price_code")
 
-    def __init__(self, name:str, sign:str):
+    def __init__(self, name:str = None, sign:str = None, id = None):
         self.name = name
         self.sign = sign
+        self.id = id

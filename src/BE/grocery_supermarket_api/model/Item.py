@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import ForeignKey
 from common import Base
-from model.group import Group
-from model.price_code import PriceCode
+from model.Group import Group
+from model.PriceCode import PriceCode
 
 class Item(Base):
     __tablename__ = 'g_item'
@@ -14,8 +14,8 @@ class Item(Base):
     price_code_id: Mapped[int] = mapped_column(ForeignKey(PriceCode.id))
     price: Mapped[float] = mapped_column(nullable=False, default=0)
     image_bytes: Mapped[bytes] = mapped_column(nullable=True)
-    price_code: Mapped["PriceCode"] = relationship(back_populates="item")
-    # group: Mapped["Group"] = relationship(back_populates="item")
+    price_code: Mapped["PriceCode"] = relationship(backref="price_code_id")
+    group: Mapped["Group"] = relationship(backref="group_id")
     def __init__(self,
                  id = None,
                  group_id: str = 1,
