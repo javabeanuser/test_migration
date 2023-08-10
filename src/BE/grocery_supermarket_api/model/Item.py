@@ -9,7 +9,7 @@ class Item(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement="auto")
     group_id: Mapped[int] = mapped_column(ForeignKey(Group.id), nullable=False)
-    name: Mapped[str] = mapped_column(nullable=False)
+    name: Mapped[str] = mapped_column(nullable=False, unique=True)
     description: Mapped[str] = mapped_column(nullable=True)
     price_code_id: Mapped[int] = mapped_column(ForeignKey(PriceCode.id))
     price: Mapped[float] = mapped_column(nullable=False, default=0)
