@@ -6,7 +6,9 @@ from model.PriceCode import PriceCode
 from model.Role import Role
 from model.User import User
 from model.UserRole import UserRole
+from model.OrderStatus import OrderStatus
 from model.Order import Order
+from model.Status import Status
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from config import Config

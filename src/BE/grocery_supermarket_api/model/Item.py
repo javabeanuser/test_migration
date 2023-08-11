@@ -3,6 +3,7 @@ from sqlalchemy import ForeignKey
 from common import Base
 from model.Group import Group
 from model.PriceCode import PriceCode
+import base64
 
 class Item(Base):
     __tablename__ = 'g_item'
@@ -31,3 +32,15 @@ class Item(Base):
         self.price_code_id = price_code_id
         self.price = price
         self.image_bytes = image_bytes
+
+    def __repr__(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'price': self.price,
+            'price_code': self.price_code.sign,
+            'group': self.group.name,
+            'preview': f"data:image/png;base64,{base64.b64encode(self.image_bytes).decode('utf-8')}",
+            'count': 1
+        }
