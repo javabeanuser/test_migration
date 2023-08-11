@@ -1,5 +1,6 @@
 import React from 'react'
 import {MenuProps} from './../types/PropTypes'
+import {Menu as MenyType} from './../types/Types'
 import {ItemPanel} from './../components/ItemPanel'
 
 import "./../assets/scss/menu.scss"

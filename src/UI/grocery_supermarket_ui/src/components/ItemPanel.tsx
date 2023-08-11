@@ -6,7 +6,7 @@ import './../assets/scss/item-panel.scss'
 export const ItemPanel = ({items}:ItemPanelProps) =>{
     return (
         <div className="item-panel">
-            {items.map(item => <ItemPreview item={item}/>)}
+            {items.map(item => <ItemPreview key={item.id} item={item}/>)}
         </div>
     )
 }
